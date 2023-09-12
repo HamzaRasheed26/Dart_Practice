@@ -8,6 +8,7 @@ import 'dart:math';
 void main() {
   int num = Random().nextInt(100) + 1;
   int guess = 0;
+  int count = 0;
 
   while (guess != num) {
     stdout.write("Guess a number between 1 and 100: ");
@@ -18,7 +19,8 @@ void main() {
     } else if (guess > num) {
       print("Too high");
     } else {
-      print("You guessed it!");
+      print("You guessed it with $count guesses!");
     }
+    count++;
   }
 }
